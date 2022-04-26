@@ -1,0 +1,11 @@
+
+
+insmod mfrc_drv.ko
+insmod rtutil3070ap.ko
+insmod rt3070ap.ko 
+insmod rtnet3070ap.ko
+ifconfig ra0 192.168.0.108
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/czmspace/lib
+
+这个lib就是当前文件夹下的lib，需要拷贝到前两级目录，再export

@@ -1,0 +1,13 @@
+
+
+insmod rtutil3070ap.ko
+insmod rt3070ap.ko 
+insmod rtnet3070ap.ko
+
+enable wifi
+ifconfig ra0 192.168.0.108
+
+
+
+
+ 

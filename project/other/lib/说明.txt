@@ -1,0 +1,2 @@
+这个lib是opencv的运行lib，要放到可执行文件前两级
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/czmspace/lib

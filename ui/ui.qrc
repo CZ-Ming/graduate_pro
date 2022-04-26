@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>rfid.png</file>
+        <file>back.png</file>
+    </qresource>
+</RCC>

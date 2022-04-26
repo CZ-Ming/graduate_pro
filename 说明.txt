@@ -1,0 +1,32 @@
+进入qt文件
+driver 保存项目需要所有驱动文件
+其他    包含项目所有过程文件
+pro     包含是项目运行的文件
+
+因此需要将整个lib  和 qt所有文件拷贝到开发板，“其他”那个文件夹可以不用
+
+更改目录注意修改人脸识别模型路径
+
+1.安装模块 rfid
+insmod mfrc_drv.ko
+指纹使用应用层编程，不需要把他的驱动加入内核
+
+2.安装wifi
+insmod rtutil3070ap.ko
+insmod rt3070ap.ko 
+insmod rtnet3070ap.ko
+
+3.配置wifi
+ifconfig ra0 192.168.0.108
+
+4.配置opencv文件
+必须放在可执行文件的前两个目录。就是本说明位于的那个文件夹
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/czmspace/bigpro/lib
+
+5.进入pro文件
+运行./test1
+
+
+如果要重新编译文件，要修改Makefile，把摄像头相关库编译进去
+INCPATH       = -I. -I ./libjpeg -I/op
+LIBS          = $(SUBLIBS) -L ./libjpeg -ljpeg -L/op
